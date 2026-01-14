@@ -1,11 +1,11 @@
 <a id="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/prgya-kapur/]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT BANNER -->
 <div align="center">
-  <img src="assets/banner.png" alt="Toronto Auto Theft Analysis Banner" width="100%">
+  <img src="assets/banner.png" alt="Toronto Auto Theft Analysis Banner" width="70%">
 </div>
 
 <br />
@@ -16,13 +16,11 @@
   <h3 align="center">Toronto Auto Theft Analysis (2014-2024)</h3>
 
   <p align="center">
-    A comprehensive data analysis project examining auto theft trends across Toronto neighborhoods
+    Uncovering the alarming surge in auto theft across Toronto's 158 neighborhoods through data-driven insights
     <br />
     <a href="#about-the-project"><strong>Explore the analysis »</strong></a>
     <br />
     <br />
-    <a href="Toronto Auto Theft Analysis.pdf">View Report</a>
-    ·
     <a href="Auto_theft_eda.ipynb">View Notebook</a>
   </p>
 </div>
@@ -57,7 +55,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project performs an **Exploratory Data Analysis (EDA)** on auto theft incidents across various Toronto neighborhoods over an 11-year period (2014-2024). The goal is to identify temporal trends, high-risk geographic areas, and provide forecasts for future years to help understand the evolving landscape of property crime in Toronto.
+**The Problem**: Toronto has experienced a dramatic surge in auto theft over the past decade, with some neighborhoods seeing theft rates **skyrocket by over 300%**. Car owners across the city are increasingly vulnerable, but which areas face the greatest risk? How did we get here, and what does the future hold?
+
+This project dives deep into **11 years of crime data** (2014-2024) spanning **158 Toronto neighborhoods** to uncover the hidden patterns behind this crisis. Through comprehensive exploratory data analysis, I transform raw crime statistics into actionable insights—identifying geographic hotspots, tracking alarming trends, and forecasting where the problem is headed.
+
+**What makes this analysis unique:**
+- 📍 **Neighborhood-level granularity** - Goes beyond city-wide stats to pinpoint exactly where risk is highest
+- 📈 **Trend detection** - Identifies inflection points and accelerating growth patterns
+- 🎯 **Predictive forecasting** - Uses machine learning to project 2025-2027 theft numbers
+- 🔍 **Comparative analysis** - Ranks neighborhoods by both volume and growth rate to find emerging hotspots
+
+Whether you're a concerned resident, policy maker, or data enthusiast, this analysis provides the evidence-based insights needed to understand Toronto's auto theft epidemic.
 
 ### Research Questions
 
@@ -84,6 +92,7 @@ This project leverages the following Python libraries and tools:
 * [![Pandas][Pandas-badge]][Pandas-url]
 * [![NumPy][NumPy-badge]][NumPy-url]
 * [![Matplotlib][Matplotlib-badge]][Matplotlib-url]
+* [![scikit-learn][sklearn-badge]][sklearn-url]
 * [![Jupyter][Jupyter-badge]][Jupyter-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -138,35 +147,35 @@ This analysis can be used to:
 The notebook follows a structured approach:
 
 ```mermaid
-graph TD
-    A["📥 Data Loading<br/>Import crime dataset (158 neighborhoods, 203 columns)"] --> B["🔍 Data Exploration<br/>Examine structure, columns, and data types"]
-    B --> C["🧹 Data Processing<br/>Filter AUTOTHEFT columns (2014-2024)"]
-    C --> D["📊 City-Wide Trend Analysis<br/>Aggregate and visualize total thefts by year"]
-    D --> E["🗺️ Geographic Analysis<br/>Identify top 10 neighborhoods by volume"]
-    E --> F["📈 Growth Analysis<br/>Calculate percentage increase by neighborhood"]
-    F --> G["🤖 Predictive Modeling<br/>Linear regression for 2025-2027 forecasts"]
-    G --> H["📋 Insights & Reporting<br/>Document findings and visualizations"]
+graph LR
+    A[📥 Data Loading] --> B[🔍 Exploration]
+    B --> C[🧹 Processing]
+    C --> D[📊 Trends]
+    D --> E[🗺️ Geography]
+    E --> F[📈 Growth]
+    F --> G[🤖 Forecasting]
+    G --> H[📋 Reporting]
     
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-    style B fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    style C fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    style D fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
-    style E fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    style F fill:#e0f2f1,stroke:#00796b,stroke-width:2px
-    style G fill:#f1f8e9,stroke:#689f38,stroke-width:2px
-    style H fill:#ede7f6,stroke:#512da8,stroke-width:2px
+    style A fill:#4A90E2,stroke:#2E5C8A,stroke-width:3px,color:#fff
+    style B fill:#7B68EE,stroke:#4B3A8E,stroke-width:3px,color:#fff
+    style C fill:#50C878,stroke:#2E7D4E,stroke-width:3px,color:#fff
+    style D fill:#FF6B6B,stroke:#CC4444,stroke-width:3px,color:#fff
+    style E fill:#F39C12,stroke:#C87F0A,stroke-width:3px,color:#fff
+    style F fill:#1ABC9C,stroke:#128A6D,stroke-width:3px,color:#fff
+    style G fill:#9B59B6,stroke:#6B3A86,stroke-width:3px,color:#fff
+    style H fill:#E74C3C,stroke:#B93C2F,stroke-width:3px,color:#fff
 ```
 
 **Workflow Steps:**
 
-1. **📥 Data Loading**: Import and explore the neighborhood crime dataset
-2. **🔍 Data Exploration**: Examine dataset structure and identify relevant columns
-3. **🧹 Data Processing**: Filter and isolate auto theft-specific columns
-4. **📊 Trend Analysis**: Visualize city-wide trends over the 11-year period
-5. **🗺️ Geographic Analysis**: Identify and rank high-risk neighborhoods
-6. **📈 Growth Analysis**: Calculate percentage changes to find fastest-growing problem areas
-7. **🤖 Predictive Modeling**: Build linear regression model for forecasting
-8. **📋 Reporting**: Document insights and create final visualizations
+1. **📥 Data Loading** - Import crime dataset (158 neighborhoods, 203 columns)
+2. **🔍 Exploration** - Examine structure and identify relevant columns  
+3. **🧹 Processing** - Filter auto theft data (2014-2024)
+4. **📊 Trends** - Visualize city-wide patterns by year
+5. **🗺️ Geography** - Identify top 10 high-risk neighborhoods
+6. **📈 Growth** - Calculate percentage increases
+7. **🤖 Forecasting** - Linear regression for 2025-2027
+8. **📋 Reporting** - Document insights and visualizations
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,7 +188,8 @@ Toronto-Auto-Theft-Analysis/
 ├── neighbourhood-crime-rates - 4326.csv  # Raw crime data
 ├── Data_set.xlsx                     # Original dataset
 ├── Cleaned Dataset Auto theft.xlsx   # Processed data
-├── Toronto Auto Theft Analysis.pdf  # Final report
+├── assets/                           # Images and visual assets
+│   └── banner.png                    # README banner image
 ├── requirements.txt                  # Python dependencies
 ├── LICENSE                          # MIT License
 └── README.md                        # This file
@@ -197,7 +207,7 @@ The analysis reveals several important insights:
 * **Percentage Growth**: Some areas have seen growth rates exceeding 100% over the study period
 * **Forecasting**: Linear regression models suggest continued increases if current trends persist
 
-> **Note**: For detailed findings, visualizations, and statistical analysis, please refer to the [Jupyter Notebook](Auto_theft_eda.ipynb) or the [PDF Report](Toronto Auto Theft Analysis.pdf).
+> **Note**: For detailed findings, visualizations, and statistical analysis, please refer to the [Jupyter Notebook](Auto_theft_eda.ipynb).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,7 +260,7 @@ Project Link: [https://github.com/prgyakapur/Toronto-Auto-Theft-Analysis](https:
 [license-shield]: https://img.shields.io/github/license/prgyakapur/Toronto-Auto-Theft-Analysis.svg?style=for-the-badge
 [license-url]: https://github.com/prgyakapur/Toronto-Auto-Theft-Analysis/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/prgyakapur
+[linkedin-url]: https://www.linkedin.com/in/prgya-kapur/
 
 <!-- Technology Badges -->
 [Python-badge]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
@@ -261,5 +271,7 @@ Project Link: [https://github.com/prgyakapur/Toronto-Auto-Theft-Analysis](https:
 [NumPy-url]: https://numpy.org/
 [Matplotlib-badge]: https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white
 [Matplotlib-url]: https://matplotlib.org/
+[sklearn-badge]: https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white
+[sklearn-url]: https://scikit-learn.org/
 [Jupyter-badge]: https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white
 [Jupyter-url]: https://jupyter.org/
