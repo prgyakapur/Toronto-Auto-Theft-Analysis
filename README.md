@@ -1,8 +1,14 @@
 <a id="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/prgya-kapur/]
+
+<!-- PROJECT BANNER -->
+<div align="center">
+  <img src="assets/banner.png" alt="Toronto Auto Theft Analysis Banner" width="100%">
+</div>
+
+<br />
 
 <!-- PROJECT LOGO -->
 <br />
@@ -131,12 +137,36 @@ This analysis can be used to:
 
 The notebook follows a structured approach:
 
-1. **Data Loading**: Import and explore the neighborhood crime dataset
-2. **Data Processing**: Filter and isolate auto theft-specific columns
-3. **Trend Analysis**: Visualize city-wide trends over the 11-year period
-4. **Geographic Analysis**: Identify and rank high-risk neighborhoods
-5. **Growth Analysis**: Calculate percentage changes to find fastest-growing problem areas
-6. **Predictive Modeling**: Build linear regression model for forecasting
+```mermaid
+graph TD
+    A["📥 Data Loading<br/>Import crime dataset (158 neighborhoods, 203 columns)"] --> B["🔍 Data Exploration<br/>Examine structure, columns, and data types"]
+    B --> C["🧹 Data Processing<br/>Filter AUTOTHEFT columns (2014-2024)"]
+    C --> D["📊 City-Wide Trend Analysis<br/>Aggregate and visualize total thefts by year"]
+    D --> E["🗺️ Geographic Analysis<br/>Identify top 10 neighborhoods by volume"]
+    E --> F["📈 Growth Analysis<br/>Calculate percentage increase by neighborhood"]
+    F --> G["🤖 Predictive Modeling<br/>Linear regression for 2025-2027 forecasts"]
+    G --> H["📋 Insights & Reporting<br/>Document findings and visualizations"]
+    
+    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style B fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style C fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style D fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    style E fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    style F fill:#e0f2f1,stroke:#00796b,stroke-width:2px
+    style G fill:#f1f8e9,stroke:#689f38,stroke-width:2px
+    style H fill:#ede7f6,stroke:#512da8,stroke-width:2px
+```
+
+**Workflow Steps:**
+
+1. **📥 Data Loading**: Import and explore the neighborhood crime dataset
+2. **🔍 Data Exploration**: Examine dataset structure and identify relevant columns
+3. **🧹 Data Processing**: Filter and isolate auto theft-specific columns
+4. **📊 Trend Analysis**: Visualize city-wide trends over the 11-year period
+5. **🗺️ Geographic Analysis**: Identify and rank high-risk neighborhoods
+6. **📈 Growth Analysis**: Calculate percentage changes to find fastest-growing problem areas
+7. **🤖 Predictive Modeling**: Build linear regression model for forecasting
+8. **📋 Reporting**: Document insights and create final visualizations
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,13 +229,6 @@ The analysis uses the `neighbourhood-crime-rates - 4326.csv` dataset, which cont
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTACT -->
 ## Contact
 
@@ -220,7 +243,6 @@ Project Link: [https://github.com/prgyakapur/Toronto-Auto-Theft-Analysis](https:
 
 * [Toronto Police Service](https://www.tps.ca/) for providing comprehensive crime data
 * [City of Toronto Open Data Portal](https://open.toronto.ca/) for making data publicly accessible
-* [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for the README structure
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
